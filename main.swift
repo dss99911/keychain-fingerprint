@@ -209,7 +209,7 @@ func main() {
         let account = args[3]
 
         // Touch ID authentication
-        guard authenticateWithTouchID(reason: "Keychain 비밀번호 조회를 위해 인증이 필요합니다") else {
+        guard authenticateWithTouchID(reason: "Authentication required to retrieve Keychain password") else {
             exit(1)
         }
 
@@ -229,7 +229,7 @@ func main() {
         let account = args[3]
 
         // Touch ID authentication first
-        guard authenticateWithTouchID(reason: "Keychain 비밀번호 저장을 위해 인증이 필요합니다") else {
+        guard authenticateWithTouchID(reason: "Authentication required to save Keychain password") else {
             exit(1)
         }
 
@@ -255,7 +255,7 @@ func main() {
         let account = args[3]
 
         // Touch ID authentication
-        guard authenticateWithTouchID(reason: "Keychain 비밀번호 삭제를 위해 인증이 필요합니다") else {
+        guard authenticateWithTouchID(reason: "Authentication required to delete Keychain password") else {
             exit(1)
         }
 
@@ -267,7 +267,7 @@ func main() {
 
     case "list":
         // Touch ID authentication
-        guard authenticateWithTouchID(reason: "Keychain 목록 조회를 위해 인증이 필요합니다") else {
+        guard authenticateWithTouchID(reason: "Authentication required to list Keychain items") else {
             exit(1)
         }
 
